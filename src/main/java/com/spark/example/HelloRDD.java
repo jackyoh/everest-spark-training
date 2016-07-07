@@ -15,12 +15,12 @@ import org.apache.spark.api.java.function.Function2;
  * @author allen
  *
  */
-public class HelloSpark {
+public class HelloRDD {
 
 	/**
 	 * 
 	 */
-	public HelloSpark() {
+	public HelloRDD() {
 		// TODO Auto-generated constructor stub
 	}
 
@@ -34,9 +34,9 @@ public class HelloSpark {
 		
 		List<Integer> data = Arrays.asList(1, 2, 3, 4, 5);
 		
-		JavaRDD<Integer> distData = sc.parallelize(data);
+		JavaRDD<Integer> list = sc.parallelize(data);
 		
-		int result = distData.reduce(new Function2<Integer, Integer, Integer>(){
+		int result = list.reduce(new Function2<Integer, Integer, Integer>(){
 
 			@Override
 			public Integer call(Integer v1, Integer v2) throws Exception {
