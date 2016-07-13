@@ -23,5 +23,6 @@ repositories {
 
 dependencies {
     compile 'org.apache.spark:spark-core_2.10:1.6.2'
+    compile 'org.apache.spark:spark-sql_2.10:1.6.2'
     compile 'junit:junit:4.12'
 }
