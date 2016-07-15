@@ -83,6 +83,8 @@ public class QueryBySQLFromRDD {
 		// Use SQL to query that table
 		DataFrame resultDF = sqlCtx.sql("select name, age from employee where age > 30");
 		resultDF.show();
+		
+		sc.close();
 	}
 
 }

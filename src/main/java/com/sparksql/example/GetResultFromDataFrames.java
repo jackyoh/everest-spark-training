@@ -78,6 +78,7 @@ public class GetResultFromDataFrames {
 			System.out.println(employee.getName() + ", age= " + employee.getAge());
 		}
 		
+		sc.close();
 	}
 
 }

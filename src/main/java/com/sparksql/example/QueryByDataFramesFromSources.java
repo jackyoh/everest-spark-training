@@ -24,6 +24,8 @@ public class QueryByDataFramesFromSources {
 		DataFrame employeeDF = sqlCtx.read().json(filePath);
 
 		employeeDF.show();
+		
+		sc.close();
 	}
 
 }

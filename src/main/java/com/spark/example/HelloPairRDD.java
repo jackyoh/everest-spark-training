@@ -62,6 +62,8 @@ public class HelloPairRDD {
 		for(Tuple2<String, Integer> tuple: result) {
 			System.out.println(tuple._1() + ": " + tuple._2());
 		}
+		
+		sc.close();
 	}
 
 }

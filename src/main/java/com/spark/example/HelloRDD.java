@@ -46,6 +46,8 @@ public class HelloRDD {
 		});
 		
 		System.out.println(result);
+		
+		sc.close();
 	}
 
 }

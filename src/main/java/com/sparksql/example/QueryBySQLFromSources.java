@@ -33,5 +33,7 @@ public class QueryBySQLFromSources {
 		
 		DataFrame resultDF = sqlCtx.sql("select name, age from employee where age > 30");
 		resultDF.show();
+		
+		sc.close();
 	}
 }

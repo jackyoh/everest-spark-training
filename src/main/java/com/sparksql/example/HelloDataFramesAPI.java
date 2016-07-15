@@ -67,6 +67,8 @@ public class HelloDataFramesAPI {
 		 * **/
 		
 		employeeDF.agg(new LinkedHashMap<String, String>(){{put("age", "max");}}).show();
+		
+		sc.close();
 	}
 
 }

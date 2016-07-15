@@ -79,7 +79,7 @@ public class QueryByDataFramesFromRDD {
 		
 		employeeDF.show();
 		
-		
+		sc.close();
 	}
 
 }
