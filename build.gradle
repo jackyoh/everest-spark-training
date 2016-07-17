@@ -34,7 +34,8 @@ dependencies {
 jar {
   
    configurations.compile.each { File path ->
-     //String libFolder = "build/libs/"
+     //gradle build -x test
+     //Not support gradle clean build -x test
      
      String buildJarFolder = "build/lib"
      if(!new File(buildJarFolder).exists()){
