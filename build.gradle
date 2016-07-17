@@ -1,6 +1,7 @@
 import java.nio.file.FileSystems;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.io.File;
 
 apply plugin: 'java'
 apply plugin: 'eclipse'
@@ -26,9 +27,11 @@ repositories {
 }
 
 dependencies {
-    compile 'org.apache.spark:spark-core_2.10:1.6.2'
-    compile 'org.apache.spark:spark-sql_2.10:1.6.2'
-    compile 'junit:junit:4.12'
+    File sparkLibFolder = new File("sparkLib")
+     
+    for(File jar : sparkLibFolder.listFiles()){
+    	compile files(jar.getAbsolutePath())
+    }
 }
 
 jar {
